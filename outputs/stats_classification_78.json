@@ -1,0 +1,30 @@
+{
+  "total_permis_pm": 9572,
+  "repartition_familles": {
+    "ENTREPRISE_PRIVEE_AUTRE": 2423,
+    "SCI_FONCIERE_PRIVEE": 2269,
+    "PROMOTEUR_PRIVE": 1583,
+    "COLLECTIVITE_ETABLISSEMENT_PUBLIC": 1360,
+    "BAILLEUR_SOCIAL": 735,
+    "INFRASTRUCTURE_RESEAU": 499,
+    "MEDICO_SOCIAL_SANTE": 470,
+    "ASSOCIATION_FONDATION_ESS": 231,
+    "NON_DETERMINE": 2
+  },
+  "taux_non_determine": 0.0002,
+  "repartition_segments_buddimm": {
+    "HORS_CIBLE": 5815,
+    "TIER_3_VEILLE": 1917,
+    "TIER_2_PRIORITAIRE": 1439,
+    "TIER_1_HAUTE_PRIORITE": 401
+  },
+  "permis_fantomes": {
+    "nombre": 3490,
+    "taux": 0.3646
+  },
+  "projets_medico_sociaux_identifies": {
+    "nombre": 1368,
+    "taux": 0.1429
+  },
+  "score_buddimm_moyen": 24.02
+}
