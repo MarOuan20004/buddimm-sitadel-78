@@ -1,0 +1,220 @@
+{
+  "departement": "Yvelines (78)",
+  "periode": "2013-2026",
+  "chiffres_globaux": {
+    "total_permis_personnes_morales": 9572,
+    "total_organisations_uniques": 4780,
+    "permis_volet_logement": 3696,
+    "permis_volet_locaux": 5876,
+    "surfaces_totales_creees_m2": 12595911,
+    "total_permis_fantomes_bloques": 3490,
+    "taux_permis_fantomes": 0.3646
+  },
+  "secteur_medico_social": {
+    "nombre_permis": 470,
+    "part_des_permis_pct": 4.91,
+    "nombre_organisations_uniques": 130,
+    "organisations_recurrentes_gte_2": 57,
+    "permis_fantomes_medico": 170,
+    "surfaces_creees_m2": 358942,
+    "top_10_organisations": [
+      {
+        "nom_prospect": "FONDATION MALLET",
+        "siren": "775667181",
+        "nombre_permis_78": 40,
+        "surface_totale_m2": 14095.0,
+        "permis_fantomes_non_demarres": 29,
+        "commune_siege": "RICHEBOURG",
+        "statut_finess": true
+      },
+      {
+        "nom_prospect": "COMMUNE DE TRAPPES",
+        "siren": "217806215",
+        "nombre_permis_78": 28,
+        "surface_totale_m2": 11339.0,
+        "permis_fantomes_non_demarres": 9,
+        "commune_siege": "TRAPPES",
+        "statut_finess": true
+      },
+      {
+        "nom_prospect": "FONDATION LEOPOLD BELLAN",
+        "siren": "775672165",
+        "nombre_permis_78": 13,
+        "surface_totale_m2": 14708.0,
+        "permis_fantomes_non_demarres": 5,
+        "commune_siege": "PARIS",
+        "statut_finess": true
+      },
+      {
+        "nom_prospect": "AVENIR APEI",
+        "siren": "785039058",
+        "nombre_permis_78": 12,
+        "surface_totale_m2": 3707.0,
+        "permis_fantomes_non_demarres": 1,
+        "commune_siege": "CARRIERES-SUR-SEINE",
+        "statut_finess": true
+      },
+      {
+        "nom_prospect": "ASS L ARCHE D AIGREFOIN",
+        "siren": "340800754",
+        "nombre_permis_78": 11,
+        "surface_totale_m2": 2838.0,
+        "permis_fantomes_non_demarres": 6,
+        "commune_siege": "SAINT-REMY-LES-CHEVREUSE",
+        "statut_finess": true
+      },
+      {
+        "nom_prospect": "APAJH COMITE DES YVELINES",
+        "siren": "304425598",
+        "nombre_permis_78": 8,
+        "surface_totale_m2": 1176.0,
+        "permis_fantomes_non_demarres": 1,
+        "commune_siege": "GUYANCOURT",
+        "statut_finess": true
+      },
+      {
+        "nom_prospect": "SAUVEGARDE ENFANCE ADOLESCENCE YVELINES (SEAY)",
+        "siren": "775708746",
+        "nombre_permis_78": 8,
+        "surface_totale_m2": 684.0,
+        "permis_fantomes_non_demarres": 3,
+        "commune_siege": "VERSAILLES",
+        "statut_finess": true
+      },
+      {
+        "nom_prospect": "ACTIONS ET RESSOURCES POUR L'INSERTION SOCIALE PAR LE SOIN ET L'EDUCATION (A.R.I.S.S.E)",
+        "siren": "332468032",
+        "nombre_permis_78": 7,
+        "surface_totale_m2": 1504.0,
+        "permis_fantomes_non_demarres": 5,
+        "commune_siege": "JOUY-EN-JOSAS",
+        "statut_finess": true
+      },
+      {
+        "nom_prospect": "ASSOCIATION DELOS APEI 78",
+        "siren": "380690511",
+        "nombre_permis_78": 6,
+        "surface_totale_m2": 3274.0,
+        "permis_fantomes_non_demarres": 1,
+        "commune_siege": "THOIRY",
+        "statut_finess": true
+      },
+      {
+        "nom_prospect": "CROIX ROUGE FRANCAISE (CRF)",
+        "siren": "775672272",
+        "nombre_permis_78": 5,
+        "surface_totale_m2": 771.0,
+        "permis_fantomes_non_demarres": 3,
+        "commune_siege": "PARIS",
+        "statut_finess": true
+      }
+    ]
+  },
+  "secteur_logement_social": {
+    "nombre_permis": 735,
+    "part_des_permis_pct": 7.68,
+    "nombre_organisations_uniques": 174,
+    "organisations_recurrentes_gte_2": 91,
+    "permis_fantomes_social": 202,
+    "logements_sociaux_crees": 9988,
+    "top_10_organisations": [
+      {
+        "nom_prospect": "FONCIERE D'HABITAT ET HUMANISME",
+        "siren": "339804858",
+        "nombre_permis_78": 7,
+        "surface_totale_m2": 1256.0,
+        "logements_sociaux_crees": 35.0,
+        "permis_fantomes_non_demarres": 4,
+        "commune_siege": "CALUIRE-ET-CUIRE"
+      },
+      {
+        "nom_prospect": "VALOPHIS SAREPA  - SOCIETE ANONYME D'HLM",
+        "siren": "572204014",
+        "nombre_permis_78": 12,
+        "surface_totale_m2": 38945.0,
+        "logements_sociaux_crees": 364.0,
+        "permis_fantomes_non_demarres": 2,
+        "commune_siege": "CRETEIL"
+      },
+      {
+        "nom_prospect": "IMMOBILIERE 3F",
+        "siren": "552141533",
+        "nombre_permis_78": 54,
+        "surface_totale_m2": 105631.0,
+        "logements_sociaux_crees": 1358.0,
+        "permis_fantomes_non_demarres": 13,
+        "commune_siege": "PARIS"
+      },
+      {
+        "nom_prospect": "LES RESIDENCES SOCIETE ANONYME D'HABITATIONS A LOYER MODERE",
+        "siren": "308435460",
+        "nombre_permis_78": 47,
+        "surface_totale_m2": 53654.0,
+        "logements_sociaux_crees": 468.0,
+        "permis_fantomes_non_demarres": 20,
+        "commune_siege": "MANTES-LA-JOLIE"
+      },
+      {
+        "nom_prospect": "SEQENS SOCIETE ANONYME D'HABITATIONS A LOYER MODERE",
+        "siren": "582142816",
+        "nombre_permis_78": 38,
+        "surface_totale_m2": 75191.0,
+        "logements_sociaux_crees": 883.0,
+        "permis_fantomes_non_demarres": 8,
+        "commune_siege": "ISSY-LES-MOULINEAUX"
+      },
+      {
+        "nom_prospect": "ENTREPRISE SOCIALE POUR L'HABITAT DOMNIS",
+        "siren": "592001648",
+        "nombre_permis_78": 36,
+        "surface_totale_m2": 51525.0,
+        "logements_sociaux_crees": 734.0,
+        "permis_fantomes_non_demarres": 13,
+        "commune_siege": "PARIS"
+      },
+      {
+        "nom_prospect": "ANTIN RESIDENCES SA HABITAT LOYER MODERE",
+        "siren": "315518803",
+        "nombre_permis_78": 32,
+        "surface_totale_m2": 99443.0,
+        "logements_sociaux_crees": 935.0,
+        "permis_fantomes_non_demarres": 2,
+        "commune_siege": "PARIS"
+      },
+      {
+        "nom_prospect": "MARIGNAN RESIDENCES",
+        "siren": "419750252",
+        "nombre_permis_78": 23,
+        "surface_totale_m2": 90446.0,
+        "logements_sociaux_crees": 82.0,
+        "permis_fantomes_non_demarres": 12,
+        "commune_siege": "MALAKOFF"
+      },
+      {
+        "nom_prospect": "OPH INTERDEPARTEMENTAL DE L'ESSONNE DU VAL D'OISE ET DES YVELINES (OPIEVOY)",
+        "siren": "434776753",
+        "nombre_permis_78": 18,
+        "surface_totale_m2": 15192.0,
+        "logements_sociaux_crees": 187.0,
+        "permis_fantomes_non_demarres": 10,
+        "commune_siege": "VERSAILLES"
+      },
+      {
+        "nom_prospect": "MARIGNAN ILE DE FRANCE",
+        "siren": "887490365",
+        "nombre_permis_78": 16,
+        "surface_totale_m2": 71819.0,
+        "logements_sociaux_crees": 237.0,
+        "permis_fantomes_non_demarres": 1,
+        "commune_siege": "MALAKOFF"
+      }
+    ]
+  },
+  "prospection_commerciale_buddimm": {
+    "prospects_tier_1_haute_priorite": 44,
+    "permis_couverts_tier_1": 441,
+    "prospects_tier_2_prioritaire": 270,
+    "permis_couverts_tier_2": 1063,
+    "chantiers_en_souffrance_cibles_amo": 528
+  }
+}
