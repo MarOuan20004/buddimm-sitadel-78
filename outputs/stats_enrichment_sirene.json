@@ -1,0 +1,11 @@
+{
+  "total_permis": 9572,
+  "permis_enrichis": 3319,
+  "taux_permis_enrichis": 0.3467,
+  "total_sirens_uniques": 4780,
+  "sirens_en_cache": 300,
+  "sirens_trouves_api": 264,
+  "permis_finess_identifies": 828,
+  "permis_ess_identifies": 216,
+  "permis_associations_identifiees": 119
+}
