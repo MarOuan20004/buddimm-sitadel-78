@@ -1,0 +1,32 @@
+{
+  "departement": "78 - Yvelines",
+  "source": "Sitadel (DiDo / SDES Ministère Transition Écologique)",
+  "licence": "Licence Ouverte 2.0 (Etalab)",
+  "volumetrie_brute": {
+    "total_lignes_logements": 20205,
+    "total_lignes_locaux": 7887,
+    "total_lignes_cumulees": 28092
+  },
+  "filtrage_personnes_morales": {
+    "permis_logements_pm": 3696,
+    "ratio_pm_logements": 0.1829,
+    "permis_locaux_pm": 5876,
+    "ratio_pm_locaux": 0.745,
+    "total_permis_pm": 9572
+  },
+  "qualite_donnees": {
+    "sirens_uniques": 4780,
+    "lignes_siren_manquant": 0,
+    "taux_completude_siren": 1.0,
+    "taux_completude_cj": 0.9996,
+    "taux_completude_ape": 0.9996
+  },
+  "repartition_volet": {
+    "LOGEMENT": 3696,
+    "LOCAL": 5876
+  },
+  "annees_couvertes": {
+    "min": 2013,
+    "max": 2026
+  }
+}
