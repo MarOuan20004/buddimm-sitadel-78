@@ -578,8 +578,43 @@ def run_analysis_pipeline():
     # Synthèse métier
     summary = generate_business_summary(df, crm)
 
-    logger.info("=== ANALYSE TERMINÉE AVEC SUCCÈS ===")
+    # Restitution visuelle console des livrables analytiques
+    print("\n" + "┌" + "─" * 78 + "┐")
+    print("│ ANALYSES DÉCISIONNELLES & RESTITUTION GRAPHIQUE (300 DPI)                     │")
+    print("├" + "─" * 78 + "┤")
+    print("│ • 6 Planches graphiques haute résolution générées dans outputs/ :            │")
+    print("│     1. 01_distribution_familles.png      (Répartition m² et permis 9 familles)│")
+    print("│     2. 02_top_acteurs_medicosocial_social.png (Top 20 médico-social & HLM)   │")
+    print("│     3. 03_dynamique_temporelle.png       (Courbes annuelles 2013-2025)       │")
+    print("│     4. 04_top_communes_78.png            (Concentration territoriale)        │")
+    print("│     5. 05_permis_fantomes_analyse.png    (3 490 chantiers bloqués > 2 ans)   │")
+    print("│     6. 06_scoring_buddimm_matrice.png    (Matrice Récurrence vs Score 0-100) │")
+    print("├" + "─" * 78 + "┤")
+    print("│ • TOP 5 ACTEURS MÉDICO-SOCIAUX (CIBLES DIRECTES AMO BUDDIMM) :               │")
+    top_med = summary["secteur_medico_social"]["top_10_organisations"][:5]
+    for i, a in enumerate(top_med, 1):
+        name = a["nom_prospect"][:34]
+        np_ = a["nombre_permis_78"]
+        fant = a["permis_fantomes_non_demarres"]
+        print(f"│   {i}. {name:34s} : {np_:2d} permis | {fant:2d} chantiers bloqués ({a['commune_siege']}) │")
+    print("├" + "─" * 78 + "┤")
+    print("│ • TOP 5 BAILLEURS SOCIAUX CONCENTRANT LE PARC SOCIAL DU 78 :                 │")
+    top_soc = summary["secteur_logement_social"]["top_10_organisations"][:5]
+    for i, a in enumerate(top_soc, 1):
+        name = a["nom_prospect"][:34]
+        np_ = a["nombre_permis_78"]
+        lgts = int(a["logements_sociaux_crees"])
+        print(f"│   {i}. {name:34s} : {np_:2d} permis | {lgts:5,d} lgts sociaux ({a['commune_siege']}) │")
+    print("├" + "─" * 78 + "┤")
+    print(f"│ • Export CRM : crm_export_prospects_buddimm.csv ({len(crm):,d} comptes qualifiés)     │")
+    print(f"│     - Tier 1 (Haute Priorité) : {summary['prospection_commerciale_buddimm']['prospects_tier_1_haute_priorite']:3d} comptes ({summary['prospection_commerciale_buddimm']['permis_couverts_tier_1']} permis couverts)            │")
+    print(f"│     - Tier 2 (Prioritaire)    : {summary['prospection_commerciale_buddimm']['prospects_tier_2_prioritaire']:3d} comptes ({summary['prospection_commerciale_buddimm']['permis_couverts_tier_2']:,d} permis couverts)          │")
+    print(f"│     - Signal chantiers bloqués: {summary['prospection_commerciale_buddimm']['chantiers_en_souffrance_cibles_amo']:3d} opportunités directes AMO relance         │")
+    print("└" + "─" * 78 + "┘\n")
+
+    return summary
 
 
 if __name__ == "__main__":
+    print("\n[Étape 4/5] Production des analyses quantitatives, 6 figures 300 DPI et export CRM...")
     run_analysis_pipeline()

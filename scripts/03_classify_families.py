@@ -320,7 +320,6 @@ def process_classification():
 
     # Sauvegarde du fichier classifié
     df.to_csv(CLASSIFIED_OUTPUT_PATH, index=False, sep=";")
-    logger.info(f"Fichier classifié exporté : {CLASSIFIED_OUTPUT_PATH} ({os.path.getsize(CLASSIFIED_OUTPUT_PATH) / 1e6:.2f} Mo)")
 
     # Synthèse statistique
     dist_familles = df["FAMILLE_ACTEUR"].value_counts().to_dict()
@@ -346,18 +345,47 @@ def process_classification():
 
     with open(STATS_OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
-    logger.info(f"Statistiques de classification sauvegardées dans : {STATS_OUTPUT_PATH}")
 
-    logger.info("\n=== RÉPARTITION PAR FAMILLE D'ACTEUR ===")
+    # Restitution visuelle console avec barres ASCII (style data engineer soigné)
+    labels_map = {
+        "ENTREPRISE_PRIVEE_AUTRE": "Entreprises privées commerciales / indus.",
+        "SCI_FONCIERE_PRIVEE": "SCI patrimoniales & Foncières privées",
+        "PROMOTEUR_PRIVE": "Promoteurs immobiliers privés (dont SCCV)",
+        "COLLECTIVITE_ETABLISSEMENT_PUBLIC": "Collectivités & Établissements publics",
+        "BAILLEUR_SOCIAL": "Bailleurs sociaux (SA HLM, OPH, ESH)",
+        "INFRASTRUCTURE_RESEAU": "Opérateurs Réseaux & Transports (Enedis, SNCF)",
+        "MEDICO_SOCIAL_SANTE": "Médico-Social & Santé (FINESS, ESMS)",
+        "ASSOCIATION_FONDATION_ESS": "Associations & Fondations ESS (hors santé)",
+        "NON_DETERMINE": "Non déterminé / Données incomplètes"
+    }
+
+    print("\n" + "┌" + "─" * 78 + "┐")
+    print("│ TAXONOMIE EN 9 FAMILLES D'ACTEURS (9 572 PERMIS B2B DANS LE 78)              │")
+    print("├" + "─" * 78 + "┤")
+    total_len = len(df)
     for fam, cnt in sorted(dist_familles.items(), key=lambda x: -x[1]):
-        logger.info(f"  {fam:35s} : {cnt:5d} ({cnt / len(df) * 100:.1f}%)")
-
-    logger.info("\n=== SEGMENTATION PROSPECTION BUDDIMM ===")
-    for seg, cnt in sorted(dist_segments.items(), key=lambda x: -x[1]):
-        logger.info(f"  {seg:25s} : {cnt:5d} ({cnt / len(df) * 100:.1f}%)")
+        pct = cnt / total_len * 100
+        bar_len = int(pct / 2.5)
+        bar = "█" * bar_len + "░" * (10 - bar_len) if bar_len <= 10 else "█" * 10
+        label = labels_map.get(fam, fam)
+        print(f"│ • {label:45s} : {cnt:5,d} ({pct:4.1f}%) [{bar}] │")
+    print("├" + "─" * 78 + "┤")
+    print(f"│ • SIGNAL CLÉ : {nb_fantomes:5,d} « permis fantômes » (chantiers bloqués > 2 ans sans DOC, 36.5%) │")
+    print("├" + "─" * 78 + "┤")
+    print("│ SEGMENTATION PROSPECTION COMMERCIALE BUDDIMM (SCORE 0-100)                   │")
+    t1 = dist_segments.get("TIER_1_HAUTE_PRIORITE", 0)
+    t2 = dist_segments.get("TIER_2_PRIORITAIRE", 0)
+    t3 = dist_segments.get("TIER_3_VEILLE", 0)
+    hc = dist_segments.get("HORS_CIBLE", 0)
+    print(f"│   - Tier 1 (Haute Priorité  ≥ 70) : {t1:5,d} permis ({t1/total_len*100:4.1f}%) ──► Direction Immobilière │")
+    print(f"│   - Tier 2 (Prioritaire    45-69) : {t2:5,d} permis ({t2/total_len*100:4.1f}%) ──► Diagnostic & Audit Parc │")
+    print(f"│   - Tier 3 (Veille         25-44) : {t3:5,d} permis ({t3/total_len*100:4.1f}%) ──► Veille Appels d'Offres   │")
+    print(f"│   - Hors Cible             (< 25) : {hc:5,d} permis ({hc/total_len*100:4.1f}%) ──► Non prospectés          │")
+    print("└" + "─" * 78 + "┘\n")
 
     return df, stats
 
 
 if __name__ == "__main__":
+    print("\n[Étape 3/5] Classification par familles et scoring de pertinence Buddimm...")
     process_classification()

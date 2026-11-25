@@ -1,7 +1,7 @@
 {
   "total_permis": 9572,
-  "permis_enrichis": 3319,
-  "taux_permis_enrichis": 0.3467,
+  "permis_enrichis_api": 3319,
+  "taux_permis_enrichis_api": 0.3467,
   "total_sirens_uniques": 4780,
   "sirens_en_cache": 300,
   "sirens_trouves_api": 264,

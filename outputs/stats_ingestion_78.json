@@ -3,9 +3,9 @@
   "source": "Sitadel (DiDo / SDES Ministère Transition Écologique)",
   "licence": "Licence Ouverte 2.0 (Etalab)",
   "volumetrie_brute": {
-    "total_lignes_logements": 20205,
-    "total_lignes_locaux": 7887,
-    "total_lignes_cumulees": 28092
+    "total_logements": 20205,
+    "total_locaux": 7887,
+    "total_cumule": 28092
   },
   "filtrage_personnes_morales": {
     "permis_logements_pm": 3696,
@@ -15,11 +15,11 @@
     "total_permis_pm": 9572
   },
   "qualite_donnees": {
-    "sirens_uniques": 4780,
-    "lignes_siren_manquant": 0,
-    "taux_completude_siren": 1.0,
-    "taux_completude_cj": 0.9996,
-    "taux_completude_ape": 0.9996
+    "organisations_uniques": 4780,
+    "sirens_manquants": 0,
+    "completude_siren_pct": 100.0,
+    "completude_cj_pct": 99.96,
+    "completude_ape_pct": 99.96
   },
   "repartition_volet": {
     "LOGEMENT": 3696,
